@@ -1,6 +1,7 @@
 <?php  
 
 require_once __DIR__ . '/db/Movies.php';
+require_once __DIR__ . '/Models/Genre.php';
 
 
 foreach ($movies as $movie ) {
@@ -13,6 +14,10 @@ foreach ($movies as $movie ) {
   echo $movie->poster;
   echo '<br>';
   echo $movie->votes;
+  echo '<br>';
+  foreach ($movie->genre as $key) {
+    echo $key->genre . '<br>';
+  };
   echo '<br>';
   echo '<hr>';
 
